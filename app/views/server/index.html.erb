@@ -1,0 +1,23 @@
+<div id = "total">
+  <div id = "server_table" >
+    <table class="table table-striped">
+      <tr>
+        <th class="col-md-2">ID</th>
+        <th class="col-md-2">Name</th>
+        <th class="col-md-2">IP4</th>
+        <th class="col-md-2">IP6</th>
+        <th class="col-md-2">Location</th>
+      </tr>
+
+    <% @servers.each do |server| %>
+      <tr>
+        <td><%= link_to server["id"], server_path(server["id"]) %></td>
+        <td><%= server["name"] %></td>
+        <td><%= server["ipv4"] %></td>
+        <td><%= server["ipv6"] %></td>
+        <td><%= server["location"] %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>

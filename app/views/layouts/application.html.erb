@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DockDocker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= nav_bar responsive: true, brand: "DD", brand_link: root_path do%>
+    <%= menu_group pull: :left do %>
+        <%= menu_item "Servers", root_path %>
+        <%= menu_item "Add Server", new_server_path %>
+    <% end %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

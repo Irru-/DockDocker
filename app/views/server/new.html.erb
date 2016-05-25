@@ -1,0 +1,22 @@
+<center>
+<%= form_for :server, url: server_index_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :IPv4 %><br>
+    <%= f.text_field :ipv4 %>
+  </p>
+  <p>
+    <%= f.label :IPv6 %><br>
+    <%= f.text_field :ipv6 %>
+  </p>
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>  
+  <p>
+    <%= f.submit "Add Server"%>
+  </p>
+<% end %>
