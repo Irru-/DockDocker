@@ -1,0 +1,23 @@
+<div id = "total">
+  <div id = "server_table" >
+    <table class="table table-striped">
+      <tr>
+        <th class="col-md-2">ID</th>
+        <th class="col-md-2">Image</th>
+        <th class="col-md-2">Names</th>
+        <th class="col-md-2">Status</th>
+        <th class="col-md-2">Actions</th>
+      </tr>
+
+    <% @containers.each do |container| %>
+      <tr>
+        <td title=<%=container["Id"]%>><%= container["Id"][0..5] + "..." %></td>
+        <td><%= container["Image"] %></td>
+        <td><%= container["Names"] %></td>
+        <td><%= container["Status"] %></td>
+        <td><%= button_to "Start", server_path(params[:id]), class: "btn btn-success", method: "get", params: { container_id: container["Id"], job: "STARTING"} %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>

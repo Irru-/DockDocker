@@ -56,5 +56,6 @@ Rails.application.routes.draw do
 
   root 'server#index'
   resources :server
+  resources :container
 
 end

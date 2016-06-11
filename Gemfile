@@ -29,6 +29,10 @@ gem "twitter-bootstrap-rails"
 
 gem 'httparty', '~> 0.13.7'
 
+gem 'resque'
+
+gem 'thin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
